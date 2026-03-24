@@ -1,87 +1,105 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jadwal RGP MTC Deshi</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jadwal RGP MTC Deshi</title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f5f7fa;
-        }
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f6f9;
+}
 
-        header {
-            background-color: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
+header {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
 
-        h1 {
-            margin: 0;
-        }
+.tabs {
+    display: flex;
+    justify-content: center;
+    background: white;
+    border-bottom: 1px solid #ddd;
+}
 
-        .container {
-            padding: 20px;
-        }
+.tab-button {
+    padding: 12px 20px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 16px;
+}
 
-        .section {
-            background: white;
-            padding: 15px;
-            margin-bottom: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
+.tab-button.active {
+    border-bottom: 3px solid #2c3e50;
+    font-weight: bold;
+}
 
-        .section h2 {
-            margin-bottom: 10px;
-            color: #2c3e50;
-        }
+.content {
+    padding: 20px;
+}
 
-        iframe {
-            width: 100%;
-            height: 600px;
-            border: none;
-            border-radius: 8px;
-        }
+.tab-content {
+    display: none;
+}
 
-        @media (max-width: 768px) {
-            iframe {
-                height: 500px;
-            }
-        }
-    </style>
+.tab-content.active {
+    display: block;
+}
+
+iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+    border-radius: 8px;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <h1>JADWAL RGP MTC Deshi</h1>
+<h1>JADWAL RGP MTC Deshi</h1>
 </header>
 
-<div class="container">
+<div class="tabs">
+<button class="tab-button active" onclick="openTab('agenda')">📋 Agenda</button>
+<button class="tab-button" onclick="openTab('week')">🗓️ Mingguan</button>
+<button class="tab-button" onclick="openTab('month')">📅 Bulanan</button>
+</div>
 
-    <!-- AGENDA -->
-    <div class="section">
-        <h2>📋 Tampilan Agenda</h2>
-        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Asia%2FJakarta&hl=id&mode=AGENDA&showTz=0&showCalendars=0&showTabs=0&src=YTJhMTBhNmZiNjgyMjBmM2JjNDU3MjA4ZDcxNjE5ZjljNWM4YzFlMzlkMjllNWFmZWJiMmRkZmI2MTU4NWI3NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=aWQuaW5kb25lc2lhbiNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23e67c73&color=%234285f4"></iframe>
-    </div>
+<div class="content">
 
-    <!-- MINGGU -->
-    <div class="section">
-        <h2>🗓️ Tampilan Mingguan</h2>
-        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Asia%2FJakarta&hl=id&mode=WEEK&showTz=0&showCalendars=0&src=YTJhMTBhNmZiNjgyMjBmM2JjNDU3MjA4ZDcxNjE5ZjljNWM4YzFlMzlkMjllNWFmZWJiMmRkZmI2MTU4NWI3NEBncmൗcC5jYWxlbmRhci5nb29nbGUuY29t&src=aWQuaW5kb25lc2lhbiNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23e67c73&color=%234285f4"></iframe>
-    </div>
+<div id="agenda" class="tab-content active">
+<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Asia%2FJakarta&hl=id&mode=AGENDA&showTz=0&showCalendars=0&showTabs=0&src=YTJhMTBhNmZiNjgyMjBmM2JjNDU3MjA4ZDcxNjE5ZjljNWM4YzFlMzlkMjllNWFmZWJiMmRkZmI2MTU4NWI3NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=aWQuaW5kb25lc2lhbiNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23e67c73&color=%234285f4"></iframe>
+</div>
 
-    <!-- BULAN -->
-    <div class="section">
-        <h2>📅 Tampilan Bulanan</h2>
-        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Asia%2FJakarta&hl=id&mode=MONTH&showTz=0&showCalendars=0&src=YTJhMTBhNmZiNjgyMjBmM2JjNDU3MjA4ZDcxNjE5ZjljNWM4YzFlMzlkMjllNWFmZWJiMmRkZmI2MTU4NWI3NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=aWQuaW5kb25lc2lhbiNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23e67c73&color=%234285f4"></iframe>
-    </div>
+<div id="week" class="tab-content">
+<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Asia%2FJakarta&hl=id&mode=WEEK&showTz=0&showCalendars=0&src=YTJhMTBhNmZiNjgyMjBmM2JjNDU3MjA4ZDcxNjE5ZjljNWM4YzFlMzlkMjllNWFmZWJiMmRkZmI2MTU4NWI3NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=aWQuaW5kb25lc2lhbiNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23e67c73&color=%234285f4"></iframe>
+</div>
+
+<div id="month" class="tab-content">
+<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Asia%2FJakarta&hl=id&mode=MONTH&showTz=0&showCalendars=0&src=YTJhMTBhNmZiNjgyMjBmM2JjNDU3MjA4ZDcxNjE5ZjljNWM4YzFlMzlkMjllNWFmZWJiMmRkZmI2MTU4NWI3NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=aWQuaW5kb25lc2lhbiNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23e67c73&color=%234285f4"></iframe>
+</div>
 
 </div>
+
+<script>
+function openTab(tabId) {
+    let contents = document.querySelectorAll(".tab-content");
+    let buttons = document.querySelectorAll(".tab-button");
+
+    contents.forEach(c => c.classList.remove("active"));
+    buttons.forEach(b => b.classList.remove("active"));
+
+    document.getElementById(tabId).classList.add("active");
+    event.target.classList.add("active");
+}
+</script>
 
 </body>
 </html>

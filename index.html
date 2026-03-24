@@ -2,18 +2,86 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Jadwal Kalender</title>
-</head>
-<body>
-    <h1>Jadwal Saya</h1>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal RGP MTC Deshi</title>
 
-    <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Asia%2FJakarta&mode=WEEK&hl=id&src=YTJhMTBhNmZiNjgyMjBmM2JjNDU3MjA4ZDcxNjE5ZjljNWM4YzFlMzlkMjllNWFmZWJiMmRkZmI2MTU4NWI3NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4uaW5kb25lc2lhbiNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23e67c73&color=%230b8043"
-        style="border:solid 1px #777"
-        width="800"
-        height="600"
-        frameborder="0"
-        scrolling="no">
-    </iframe>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f5f7fa;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .section {
+            background: white;
+            padding: 15px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .section h2 {
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 768px) {
+            iframe {
+                height: 500px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>JADWAL RGP MTC Deshi</h1>
+</header>
+
+<div class="container">
+
+    <!-- AGENDA -->
+    <div class="section">
+        <h2>📋 Tampilan Agenda</h2>
+        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Asia%2FJakarta&hl=id&mode=AGENDA&showTz=0&showCalendars=0&showTabs=0&src=YTJhMTBhNmZiNjgyMjBmM2JjNDU3MjA4ZDcxNjE5ZjljNWM4YzFlMzlkMjllNWFmZWJiMmRkZmI2MTU4NWI3NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=aWQuaW5kb25lc2lhbiNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23e67c73&color=%234285f4"></iframe>
+    </div>
+
+    <!-- MINGGU -->
+    <div class="section">
+        <h2>🗓️ Tampilan Mingguan</h2>
+        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Asia%2FJakarta&hl=id&mode=WEEK&showTz=0&showCalendars=0&src=YTJhMTBhNmZiNjgyMjBmM2JjNDU3MjA4ZDcxNjE5ZjljNWM4YzFlMzlkMjllNWFmZWJiMmRkZmI2MTU4NWI3NEBncmൗcC5jYWxlbmRhci5nb29nbGUuY29t&src=aWQuaW5kb25lc2lhbiNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23e67c73&color=%234285f4"></iframe>
+    </div>
+
+    <!-- BULAN -->
+    <div class="section">
+        <h2>📅 Tampilan Bulanan</h2>
+        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Asia%2FJakarta&hl=id&mode=MONTH&showTz=0&showCalendars=0&src=YTJhMTBhNmZiNjgyMjBmM2JjNDU3MjA4ZDcxNjE5ZjljNWM4YzFlMzlkMjllNWFmZWJiMmRkZmI2MTU4NWI3NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=aWQuaW5kb25lc2lhbiNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23e67c73&color=%234285f4"></iframe>
+    </div>
+
+</div>
 
 </body>
 </html>

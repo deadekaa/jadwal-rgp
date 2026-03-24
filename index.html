@@ -65,6 +65,17 @@ header {
     display: block;
 }
 
+/* NOTE NAVIGASI */
+.nav-note {
+    font-size: 12px;
+    color: #444;
+    text-align: center;
+    margin-bottom: 6px;
+    background: #eef3f8;
+    padding: 4px;
+    border-radius: 6px;
+}
+
 /* IFRAME */
 iframe {
     width: 100%;
@@ -72,13 +83,13 @@ iframe {
     border-radius: 8px;
 }
 
-/* HEIGHT */
+/* HEIGHT MOBILE */
 .agenda iframe { height: 500px; }
 .week iframe { height: 1100px; }
 .month iframe { height: 500px; }
 .full iframe { height: 1100px; }
 
-/* DESKTOP ADJUSTMENT */
+/* DESKTOP */
 @media (min-width: 768px) {
     header {
         font-size: 18px;
@@ -129,14 +140,17 @@ iframe {
 </div>
 
 <div id="week" class="tab-content week">
+<div class="nav-note">Gunakan tombol &lt; dan &gt; di kalender untuk pindah minggu</div>
 <iframe src="https://calendar.google.com/calendar/embed?height=1400&wkst=2&ctz=Asia%2FJakarta&hl=id&mode=WEEK&showTz=0&showCalendars=0&src=YTJhMTBhNmZiNjgyMjBmM2JjNDU3MjA4ZDcxNjE5ZjljNWM4YzFlMzlkMjllNWFmZWJiMmRkZmI2MTU4NWI3NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=aWQuaW5kb25lc2lhbiNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23e67c73&color=%234285f4"></iframe>
 </div>
 
 <div id="month" class="tab-content month">
+<div class="nav-note">Gunakan tombol &lt; dan &gt; di kalender untuk pindah bulan</div>
 <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Asia%2FJakarta&hl=id&mode=MONTH&showTz=0&showCalendars=0&src=YTJhMTBhNmZiNjgyMjBmM2JjNDU3MjA4ZDcxNjE5ZjljNWM4YzFlMzlkMjllNWFmZWJiMmRkZmI2MTU4NWI3NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=aWQuaW5kb25lc2lhbiNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23e67c73&color=%234285f4"></iframe>
 </div>
 
 <div id="full" class="tab-content full">
+<div class="nav-note">Gunakan tombol &lt; dan &gt; di kalender untuk pindah bulan</div>
 <iframe src="https://calendar.google.com/calendar/embed?height=1400&wkst=2&ctz=Asia%2FJakarta&hl=id&mode=MONTH&showTz=0&showCalendars=0&src=ZGVzaGkua2FydW5pYUBydWFuZ2d1cnUuaWQ&src=YTJhMTBhNmZiNjgyMjBmM2JjNDU3MjA4ZDcxNjE5ZjljNWM4YzFlMzlkMjllNWFmZWJiMmRkZmI2MTU4NWI3NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=aWQuaW5kb25lc2lhbiNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23039be5&color=%23e67c73&color=%234285f4"></iframe>
 </div>
 

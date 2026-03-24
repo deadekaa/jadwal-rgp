@@ -12,26 +12,39 @@ body {
     background: #f4f6f9;
 }
 
+/* STICKY TOPBAR */
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* HEADER */
 header {
     background: #2c3e50;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 12px;
+    font-size: 14px;
 }
 
+/* TABS */
 .tabs {
     display: flex;
-    justify-content: center;
-    background: white;
+    overflow-x: auto;
+    white-space: nowrap;
     border-bottom: 1px solid #ddd;
 }
 
 .tab-button {
-    padding: 12px 20px;
-    cursor: pointer;
+    flex: 0 0 auto;
+    padding: 10px 14px;
+    font-size: 14px;
     border: none;
     background: none;
-    font-size: 16px;
+    cursor: pointer;
 }
 
 .tab-button.active {
@@ -39,8 +52,9 @@ header {
     font-weight: bold;
 }
 
+/* CONTENT */
 .content {
-    padding: 20px;
+    padding: 10px;
 }
 
 .tab-content {
@@ -51,39 +65,79 @@ header {
     display: block;
 }
 
+/* IFRAME */
 iframe {
     width: 100%;
-    height: 600px;
     border: none;
     border-radius: 8px;
+}
+
+/* HEIGHT */
+.agenda iframe { height: 500px; }
+.week iframe { height: 1100px; }
+.month iframe { height: 500px; }
+.full iframe { height: 1100px; }
+
+/* DESKTOP ADJUSTMENT */
+@media (min-width: 768px) {
+    header {
+        font-size: 18px;
+        padding: 20px;
+    }
+
+    .tabs {
+        justify-content: center;
+        overflow-x: visible;
+    }
+
+    .tab-button {
+        font-size: 16px;
+        padding: 12px 18px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .agenda iframe { height: 600px; }
+    .week iframe { height: 1400px; }
+    .month iframe { height: 600px; }
+    .full iframe { height: 1400px; }
 }
 </style>
 </head>
 
 <body>
 
-<header>
-<h1>JADWAL RGP MTC Deshi</h1>
-</header>
+<div class="topbar">
+    <header>
+        JADWAL RGP MTC Deshi
+    </header>
 
-<div class="tabs">
-<button class="tab-button active" onclick="openTab('agenda')">📋 Jadwal</button>
-<button class="tab-button" onclick="openTab('week')">🗓️ Mingguan</button>
-<button class="tab-button" onclick="openTab('month')">📅 Bulanan</button>
+    <div class="tabs">
+        <button class="tab-button active" onclick="openTab('agenda')">📋 Jadwal Mengajar</button>
+        <button class="tab-button" onclick="openTab('week')">🗓️ Mingguan</button>
+        <button class="tab-button" onclick="openTab('month')">📅 Bulanan</button>
+        <button class="tab-button" onclick="openTab('full')">📊 Jadwal Full</button>
+    </div>
 </div>
 
 <div class="content">
 
-<div id="agenda" class="tab-content active">
+<div id="agenda" class="tab-content agenda active">
 <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Asia%2FJakarta&hl=id&mode=AGENDA&showTz=0&showCalendars=0&showTabs=0&src=YTJhMTBhNmZiNjgyMjBmM2JjNDU3MjA4ZDcxNjE5ZjljNWM4YzFlMzlkMjllNWFmZWJiMmRkZmI2MTU4NWI3NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=aWQuaW5kb25lc2lhbiNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23e67c73&color=%234285f4"></iframe>
 </div>
 
-<div id="week" class="tab-content">
+<div id="week" class="tab-content week">
 <iframe src="https://calendar.google.com/calendar/embed?height=1400&wkst=2&ctz=Asia%2FJakarta&hl=id&mode=WEEK&showTz=0&showCalendars=0&src=YTJhMTBhNmZiNjgyMjBmM2JjNDU3MjA4ZDcxNjE5ZjljNWM4YzFlMzlkMjllNWFmZWJiMmRkZmI2MTU4NWI3NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=aWQuaW5kb25lc2lhbiNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23e67c73&color=%234285f4"></iframe>
 </div>
 
-<div id="month" class="tab-content">
+<div id="month" class="tab-content month">
 <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Asia%2FJakarta&hl=id&mode=MONTH&showTz=0&showCalendars=0&src=YTJhMTBhNmZiNjgyMjBmM2JjNDU3MjA4ZDcxNjE5ZjljNWM4YzFlMzlkMjllNWFmZWJiMmRkZmI2MTU4NWI3NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=aWQuaW5kb25lc2lhbiNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23e67c73&color=%234285f4"></iframe>
+</div>
+
+<div id="full" class="tab-content full">
+<iframe src="https://calendar.google.com/calendar/embed?height=1400&wkst=2&ctz=Asia%2FJakarta&hl=id&mode=MONTH&showTz=0&showCalendars=0&src=ZGVzaGkua2FydW5pYUBydWFuZ2d1cnUuaWQ&src=YTJhMTBhNmZiNjgyMjBmM2JjNDU3MjA4ZDcxNjE5ZjljNWM4YzFlMzlkMjllNWFmZWJiMmRkZmI2MTU4NWI3NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=aWQuaW5kb25lc2lhbiNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23039be5&color=%23e67c73&color=%234285f4"></iframe>
 </div>
 
 </div>

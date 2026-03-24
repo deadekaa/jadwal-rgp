@@ -65,7 +65,7 @@ header {
     display: block;
 }
 
-/* NOTE ANIMASI */
+/* NOTE */
 .nav-note {
     font-size: 15px;
     font-weight: bold;
@@ -76,21 +76,24 @@ header {
     padding: 12px;
     border-radius: 10px;
     border: 2px solid #90caf9;
-    animation: pulse 1.8s infinite;
+}
+
+/* ANIMATION */
+.pulse {
+    animation: pulse 1.6s ease-in-out infinite;
 }
 
 @keyframes pulse {
     0% {
         transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(33, 150, 243, 0.4);
+        box-shadow: 0 0 0 0 rgba(33,150,243,0.5);
     }
     70% {
         transform: scale(1.03);
-        box-shadow: 0 0 0 10px rgba(33, 150, 243, 0);
+        box-shadow: 0 0 0 12px rgba(33,150,243,0);
     }
     100% {
         transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(33, 150, 243, 0);
     }
 }
 
@@ -101,7 +104,7 @@ iframe {
     border-radius: 8px;
 }
 
-/* HEIGHT MOBILE */
+/* MOBILE */
 .agenda iframe { height: 500px; }
 .week iframe { height: 1100px; }
 .month iframe { height: 500px; }
@@ -139,53 +142,43 @@ iframe {
 <body>
 
 <div class="topbar">
-    <header>
-        JADWAL RGP MTC Deshi
-    </header>
+<header>
+JADWAL RGP MTC Deshi
+</header>
 
-    <div class="tabs">
-        <button class="tab-button" onclick="openTab('agenda')">📋 Jadwal Mengajar</button>
-        <button class="tab-button active" onclick="openTab('week')">🗓️ Mingguan</button>
-        <button class="tab-button" onclick="openTab('month')">📅 Bulanan</button>
-        <button class="tab-button" onclick="openTab('full')">📊 Jadwal Full</button>
-    </div>
+<div class="tabs">
+<button class="tab-button" onclick="openTab(event,'agenda')">📋 Jadwal Mengajar</button>
+<button class="tab-button active" onclick="openTab(event,'week')">🗓️ Mingguan</button>
+<button class="tab-button" onclick="openTab(event,'month')">📅 Bulanan</button>
+<button class="tab-button" onclick="openTab(event,'full')">📊 Jadwal Full</button>
+</div>
 </div>
 
 <div class="content">
 
-<!-- JADWAL MENGAJAR -->
 <div id="agenda" class="tab-content agenda">
 <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Asia%2FJakarta&hl=id&mode=AGENDA&showTz=0&showCalendars=0&showTabs=0&src=YTJhMTBhNmZiNjgyMjBmM2JjNDU3MjA4ZDcxNjE5ZjljNWM4YzFlMzlkMjllNWFmZWJiMmRkZmI2MTU4NWI3NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=aWQuaW5kb25lc2lhbiNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23e67c73&color=%234285f4"></iframe>
 </div>
 
-<!-- MINGGUAN (DEFAULT) -->
 <div id="week" class="tab-content week active">
-<div class="nav-note">
-👉 Gunakan tombol &lt; dan &gt; di atas kalender untuk pindah minggu
-</div>
+<div class="nav-note">👉 Gunakan tombol &lt; dan &gt; di atas kalender untuk pindah minggu</div>
 <iframe src="https://calendar.google.com/calendar/embed?height=1400&wkst=2&ctz=Asia%2FJakarta&hl=id&mode=WEEK&showTz=0&showCalendars=0&src=YTJhMTBhNmZiNjgyMjBmM2JjNDU3MjA4ZDcxNjE5ZjljNWM4YzFlMzlkMjllNWFmZWJiMmRkZmI2MTU4NWI3NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=aWQuaW5kb25lc2lhbiNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23e67c73&color=%234285f4"></iframe>
 </div>
 
-<!-- BULANAN -->
 <div id="month" class="tab-content month">
-<div class="nav-note">
-👉 Gunakan tombol &lt; dan &gt; di atas kalender untuk pindah bulan
-</div>
+<div class="nav-note">👉 Gunakan tombol &lt; dan &gt; di atas kalender untuk pindah bulan</div>
 <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Asia%2FJakarta&hl=id&mode=MONTH&showTz=0&showCalendars=0&src=YTJhMTBhNmZiNjgyMjBmM2JjNDU3MjA4ZDcxNjE5ZjljNWM4YzFlMzlkMjllNWFmZWJiMmRkZmI2MTU4NWI3NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=aWQuaW5kb25lc2lhbiNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23e67c73&color=%234285f4"></iframe>
 </div>
 
-<!-- FULL -->
 <div id="full" class="tab-content full">
-<div class="nav-note">
-👉 Gunakan tombol &lt; dan &gt; di atas kalender untuk pindah bulan
-</div>
+<div class="nav-note">👉 Gunakan tombol &lt; dan &gt; di atas kalender untuk pindah bulan</div>
 <iframe src="https://calendar.google.com/calendar/embed?height=1400&wkst=2&ctz=Asia%2FJakarta&hl=id&mode=MONTH&showTz=0&showCalendars=0&src=ZGVzaGkua2FydW5pYUBydWFuZ2d1cnUuaWQ&src=YTJhMTBhNmZiNjgyMjBmM2JjNDU3MjA4ZDcxNjE5ZjljNWM4YzFlMzlkMjllNWFmZWJiMmRkZmI2MTU4NWI3NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=aWQuaW5kb25lc2lhbiNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23039be5&color=%23e67c73&color=%234285f4"></iframe>
 </div>
 
 </div>
 
 <script>
-function openTab(tabId) {
+function openTab(evt, tabId) {
     let contents = document.querySelectorAll(".tab-content");
     let buttons = document.querySelectorAll(".tab-button");
 
@@ -193,7 +186,27 @@ function openTab(tabId) {
     buttons.forEach(b => b.classList.remove("active"));
 
     document.getElementById(tabId).classList.add("active");
-    event.target.classList.add("active");
+    evt.currentTarget.classList.add("active");
+
+    let note = document.querySelector("#" + tabId + " .nav-note");
+    if (note) {
+        note.classList.add("pulse");
+
+        setTimeout(() => {
+            note.classList.remove("pulse");
+        }, 3000); // 🔥 3 DETIK
+    }
+}
+
+window.onload = () => {
+    let firstNote = document.querySelector(".tab-content.active .nav-note");
+    if (firstNote) {
+        firstNote.classList.add("pulse");
+
+        setTimeout(() => {
+            firstNote.classList.remove("pulse");
+        }, 3000); // 🔥 3 DETIK
+    }
 }
 </script>
 

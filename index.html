@@ -94,7 +94,7 @@ header {
 .tab-content { display: none; }
 .tab-content.active { display: block; }
 
-/* MOBILE TABS (TEXT) */
+/* MOBILE TABS */
 .mobile-tabs {
     display: flex;
     overflow-x: auto;
@@ -163,7 +163,7 @@ iframe {
 
 <body>
 
-<!-- ================= DESKTOP ================= -->
+<!-- DESKTOP -->
 <div class="desktop-view">
 
 <div class="topbar">
@@ -180,30 +180,40 @@ iframe {
 <div class="content">
 
 <div id="agenda" class="tab-content agenda">
-<div class="nav-note note-nav">👉 Gunakan ❮ ❯ untuk pindah hari</div>
+<div class="nav-note note-nav">
+👉 Gunakan tombol ❮ dan ❯ di atas kalender untuk pindah hari
+</div>
 <iframe src="https://calendar.google.com/calendar/embed?mode=AGENDA&wkst=2&hl=id&ctz=Asia%2FJakarta&src=YTJhMTBhNmZiNjgyMjBmM2JjNDU3MjA4ZDcxNjE5ZjljNWM4YzFlMzlkMjllNWFmZWJiMmRkZmI2MTU4NWI3NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23b39ddb"></iframe>
 </div>
 
 <div id="week" class="tab-content week active">
-<div class="nav-note note-nav">👉 Gunakan ❮ ❯ untuk pindah minggu</div>
+<div class="nav-note note-nav">
+👉 Gunakan tombol ❮ dan ❯ di atas kalender untuk pindah minggu
+</div>
 <iframe src="https://calendar.google.com/calendar/embed?mode=WEEK&wkst=2&hl=id&ctz=Asia%2FJakarta&src=YTJhMTBhNmZiNjgyMjBmM2JjNDU3MjA4ZDcxNjE5ZjljNWM4YzFlMzlkMjllNWFmZWJiMmRkZmI2MTU4NWI3NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23d81b60"></iframe>
 </div>
 
 <div id="month" class="tab-content month">
-<div class="nav-note note-nav">👉 Gunakan ❮ ❯ untuk pindah bulan</div>
+<div class="nav-note note-nav">
+👉 Gunakan tombol ❮ dan ❯ di atas kalender untuk pindah bulan
+</div>
 <iframe src="https://calendar.google.com/calendar/embed?mode=MONTH&wkst=2&hl=id&ctz=Asia%2FJakarta&src=YTJhMTBhNmZiNjgyMjBmM2JjNDU3MjA4ZDcxNjE5ZjljNWM4YzFlMzlkMjllNWFmZWJiMmRkZmI2MTU4NWI3NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23b39ddb"></iframe>
 </div>
 
 <div id="full" class="tab-content full">
-<div class="nav-note note-info">📌 Jadwal mengajar + kegiatan lain</div>
-<div class="nav-note note-nav">👉 Gunakan ❮ ❯ untuk pindah bulan</div>
+<div class="nav-note note-info">
+📌 Jadwal ini mencakup jadwal mengajar + kegiatan lain (di luar mengajar)
+</div>
+<div class="nav-note note-nav">
+👉 Gunakan tombol ❮ dan ❯ di atas kalender untuk pindah bulan
+</div>
 <iframe src="https://calendar.google.com/calendar/embed?mode=MONTH&wkst=2&hl=id&ctz=Asia%2FJakarta&src=ZGVzaGkua2FydW5pYUBydWFuZ2d1cnUuaWQ&color=%237cb342"></iframe>
 </div>
 
 </div>
 </div>
 
-<!-- ================= MOBILE ================= -->
+<!-- MOBILE -->
 <div class="mobile-view">
 
 <div class="topbar">
@@ -220,23 +230,33 @@ iframe {
 <div class="swipe-container" id="swipe">
 
 <div class="slide" id="s0">
-<div class="nav-note note-nav">👉 Gunakan ❮ ❯ untuk pindah hari</div>
-<iframe src="https://calendar.google.com/calendar/embed?mode=AGENDA&wkst=2&hl=id&ctz=Asia%2FJakarta&src=YTJhMTBhNmZiNjgyMjBmM2JjNDU3MjA4ZDcxNjE5ZjljNWM4YzFlMzlkMjllNWFmZWJiMmRkZmI2MTU4NWI3NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23b39ddb"></iframe>
+<div class="nav-note note-nav">
+👉 Gunakan tombol ❮ dan ❯ di atas kalender untuk pindah hari
+</div>
+<iframe src="https://calendar.google.com/calendar/embed?mode=AGENDA&wkst=2&hl=id&ctz=Asia%2FJakarta&src=YTJhMTBhNmZiNjgyMjBmM2JjNDU3MjA4ZDcxNjE5ZjljNWM4YzFlMzlkMjllNWFmZWJiMmRkZmI2MTU4NWI3NEBncmועપ"></iframe>
 </div>
 
 <div class="slide active" id="s1">
-<div class="nav-note note-nav">👉 Gunakan ❮ ❯ untuk pindah minggu</div>
+<div class="nav-note note-nav">
+👉 Gunakan tombol ❮ dan ❯ di atas kalender untuk pindah minggu
+</div>
 <iframe src="https://calendar.google.com/calendar/embed?mode=WEEK&wkst=2&hl=id&ctz=Asia%2FJakarta&src=YTJhMTBhNmZiNjgyMjBmM2JjNDU3MjA4ZDcxNjE5ZjljNWM4YzFlMzlkMjllNWFmZWJiMmRkZmI2MTU4NWI3NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23d81b60"></iframe>
 </div>
 
 <div class="slide" id="s2">
-<div class="nav-note note-nav">👉 Gunakan ❮ ❯ untuk pindah bulan</div>
+<div class="nav-note note-nav">
+👉 Gunakan tombol ❮ dan ❯ di atas kalender untuk pindah bulan
+</div>
 <iframe src="https://calendar.google.com/calendar/embed?mode=MONTH&wkst=2&hl=id&ctz=Asia%2FJakarta&src=YTJhMTBhNmZiNjgyMjBmM2JjNDU3MjA4ZDcxNjE5ZjljNWM4YzFlMzlkMjllNWFmZWJiMmRkZmI2MTU4NWI3NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23b39ddb"></iframe>
 </div>
 
 <div class="slide" id="s3">
-<div class="nav-note note-info">📌 Jadwal mengajar + kegiatan lain</div>
-<div class="nav-note note-nav">👉 Gunakan ❮ ❯ untuk pindah bulan</div>
+<div class="nav-note note-info">
+📌 Jadwal ini mencakup jadwal mengajar + kegiatan lain (di luar mengajar)
+</div>
+<div class="nav-note note-nav">
+👉 Gunakan tombol ❮ dan ❯ di atas kalender untuk pindah bulan
+</div>
 <iframe src="https://calendar.google.com/calendar/embed?mode=MONTH&wkst=2&hl=id&ctz=Asia%2FJakarta&src=ZGVzaGkua2FydW5pYUBydWFuZ2d1cnUuaWQ&color=%237cb342"></iframe>
 </div>
 
@@ -251,7 +271,6 @@ function triggerAnimation(el){
     });
 }
 
-/* DESKTOP */
 function openTab(evt,id){
     document.querySelectorAll(".tab-content").forEach(c=>c.classList.remove("active"));
     document.querySelectorAll(".tab-button").forEach(b=>b.classList.remove("active"));
@@ -260,7 +279,6 @@ function openTab(evt,id){
     triggerAnimation(document.getElementById(id));
 }
 
-/* MOBILE */
 let current=1;
 
 function goTo(i){
@@ -278,7 +296,6 @@ function goTo(i){
     triggerAnimation(document.querySelectorAll(".slide")[i]);
 }
 
-/* SWIPE */
 let startX=0;
 document.getElementById("swipe").addEventListener("touchstart",e=>{
     startX=e.touches[0].clientX;

@@ -65,15 +65,33 @@ header {
     display: block;
 }
 
-/* NOTE NAVIGASI */
+/* NOTE ANIMASI */
 .nav-note {
-    font-size: 12px;
-    color: #444;
+    font-size: 15px;
+    font-weight: bold;
+    color: #0b3d91;
     text-align: center;
-    margin-bottom: 6px;
-    background: #eef3f8;
-    padding: 4px;
-    border-radius: 6px;
+    margin-bottom: 12px;
+    background: #e3f2fd;
+    padding: 12px;
+    border-radius: 10px;
+    border: 2px solid #90caf9;
+    animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(33, 150, 243, 0.4);
+    }
+    70% {
+        transform: scale(1.03);
+        box-shadow: 0 0 0 10px rgba(33, 150, 243, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(33, 150, 243, 0);
+    }
 }
 
 /* IFRAME */
@@ -126,8 +144,8 @@ iframe {
     </header>
 
     <div class="tabs">
-        <button class="tab-button active" onclick="openTab('agenda')">📋 Jadwal Mengajar</button>
-        <button class="tab-button" onclick="openTab('week')">🗓️ Mingguan</button>
+        <button class="tab-button" onclick="openTab('agenda')">📋 Jadwal Mengajar</button>
+        <button class="tab-button active" onclick="openTab('week')">🗓️ Mingguan</button>
         <button class="tab-button" onclick="openTab('month')">📅 Bulanan</button>
         <button class="tab-button" onclick="openTab('full')">📊 Jadwal Full</button>
     </div>
@@ -135,22 +153,32 @@ iframe {
 
 <div class="content">
 
-<div id="agenda" class="tab-content agenda active">
+<!-- JADWAL MENGAJAR -->
+<div id="agenda" class="tab-content agenda">
 <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Asia%2FJakarta&hl=id&mode=AGENDA&showTz=0&showCalendars=0&showTabs=0&src=YTJhMTBhNmZiNjgyMjBmM2JjNDU3MjA4ZDcxNjE5ZjljNWM4YzFlMzlkMjllNWFmZWJiMmRkZmI2MTU4NWI3NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=aWQuaW5kb25lc2lhbiNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23e67c73&color=%234285f4"></iframe>
 </div>
 
-<div id="week" class="tab-content week">
-<div class="nav-note">Gunakan tombol &lt; dan &gt; di kalender untuk pindah minggu</div>
+<!-- MINGGUAN (DEFAULT) -->
+<div id="week" class="tab-content week active">
+<div class="nav-note">
+👉 Gunakan tombol &lt; dan &gt; di atas kalender untuk pindah minggu
+</div>
 <iframe src="https://calendar.google.com/calendar/embed?height=1400&wkst=2&ctz=Asia%2FJakarta&hl=id&mode=WEEK&showTz=0&showCalendars=0&src=YTJhMTBhNmZiNjgyMjBmM2JjNDU3MjA4ZDcxNjE5ZjljNWM4YzFlMzlkMjllNWFmZWJiMmRkZmI2MTU4NWI3NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=aWQuaW5kb25lc2lhbiNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23e67c73&color=%234285f4"></iframe>
 </div>
 
+<!-- BULANAN -->
 <div id="month" class="tab-content month">
-<div class="nav-note">Gunakan tombol &lt; dan &gt; di kalender untuk pindah bulan</div>
+<div class="nav-note">
+👉 Gunakan tombol &lt; dan &gt; di atas kalender untuk pindah bulan
+</div>
 <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Asia%2FJakarta&hl=id&mode=MONTH&showTz=0&showCalendars=0&src=YTJhMTBhNmZiNjgyMjBmM2JjNDU3MjA4ZDcxNjE5ZjljNWM4YzFlMzlkMjllNWFmZWJiMmRkZmI2MTU4NWI3NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=aWQuaW5kb25lc2lhbiNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23e67c73&color=%234285f4"></iframe>
 </div>
 
+<!-- FULL -->
 <div id="full" class="tab-content full">
-<div class="nav-note">Gunakan tombol &lt; dan &gt; di kalender untuk pindah bulan</div>
+<div class="nav-note">
+👉 Gunakan tombol &lt; dan &gt; di atas kalender untuk pindah bulan
+</div>
 <iframe src="https://calendar.google.com/calendar/embed?height=1400&wkst=2&ctz=Asia%2FJakarta&hl=id&mode=MONTH&showTz=0&showCalendars=0&src=ZGVzaGkua2FydW5pYUBydWFuZ2d1cnUuaWQ&src=YTJhMTBhNmZiNjgyMjBmM2JjNDU3MjA4ZDcxNjE5ZjljNWM4YzFlMzlkMjllNWFmZWJiMmRkZmI2MTU4NWI3NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=aWQuaW5kb25lc2lhbiNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23039be5&color=%23e67c73&color=%234285f4"></iframe>
 </div>
 
